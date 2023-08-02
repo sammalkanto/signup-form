@@ -1,0 +1,52 @@
+@media (max-width: 1000px) {
+    html, body {
+        overflow-x: hidden;
+    }
+
+    html {
+        font-size: 14px;
+    }
+
+    #root {
+        height: auto;
+        background-image: url('../assets/bg-intro-mobile.png');
+    }
+
+    .main {
+        flex-direction: column;
+        padding: 96px 16px;
+
+        > div {
+            width: auto;
+            max-width: 480px;
+        }
+
+        .content {
+            .title {
+                font-size: 1.8rem;
+                text-align: center;
+                line-height: 2.5rem;
+            }
+
+            .description {
+                text-align: center;
+            }
+        }
+
+        .signup {
+            .try-it-free {
+                padding: 18px 58px;
+            }
+
+            form {
+                padding: 24px;
+
+                .input {
+                    input {
+                        padding: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

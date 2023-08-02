@@ -1,0 +1,150 @@
+@import 'config.scss';
+
+body {
+    height: 100vh;
+    background: $red;
+}
+
+#root {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../assets/bg-intro-desktop.png');
+}
+
+.main {
+    display: flex;
+    padding: 64px;
+    gap: 64px;
+
+    > div {
+        width: 50%;
+        max-width: 580px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        justify-content: center;
+
+        .title {
+            font-size: 3rem;
+            line-height: 3.5rem;
+        }
+
+        .description {
+            line-height: 1.7rem;
+        }
+    }
+
+    .signup {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .try-it-free {
+            background: $blue;
+            padding: 18px 32px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.1);
+
+            .highlight {
+                font-weight: 600;
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            background: white;
+            padding: 32px;
+            gap: 32px;
+            border-radius: 8px;
+            box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.1);
+
+            .input {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+
+                input {
+                    padding: 16px 32px;
+                    border-radius: 6px;
+                    border: 1px solid $grayishBlue;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    color: $darkBlue;
+
+                    &.invalid {
+                        outline: solid 2px $red;
+                        color: $red;
+                    }
+                }
+
+                .icon {
+                    position: absolute;
+                    right: 24px;
+                    top: 17.5px;
+                    width: 24px;
+                    visibility: hidden;
+
+                    &.invalid {
+                        visibility: visible;
+                    }
+                }
+
+                .error {
+                    position: absolute;
+                    color: $red;
+                    bottom: -24px;
+                    right: 0;
+                    font-size: 0.75rem;
+                    visibility: hidden;
+
+                    &.invalid {
+                        visibility: visible;
+                    }
+                }
+            }
+
+            .box {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+
+                button {
+                    padding: 16px;
+                    border-radius: 8px;
+                    border: none;
+                    color: white;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    background: $green;
+                    box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.1);
+                    cursor: pointer;
+
+                    &:hover {
+                        background: lighten($green, 10%);
+                    }
+                }
+
+                .terms-and-services {
+                    color: $grayishBlue;
+                    font-size: 0.8rem;
+                    text-align: center;
+
+                    .highlight {
+                        color: $red;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@import 'media.scss';
